@@ -35,8 +35,8 @@ Commits N Crosses
 
  Player 1 should create a new local branch, and check it out
 
-    git branch game1
-    git checkout game1
+    git branch <player1 user name>/game1
+    git checkout <player1 user name>/game1
 
  Player 1 then makes a move.
 
@@ -45,14 +45,14 @@ Commits N Crosses
 
     git add .
     git commit -m "some witty comment"
-    git push -u origin game1
+    git push -u origin <player1 user name>/game1
 
  Enter password when prompted.
     
  After the first move, Player 2 should fetch the changes, and check out the game branch.
 
     git fetch
-    git checkout game1
+    git checkout <player1 user name>/game1
 
  Player 2 can see the commit message using:
 
@@ -74,7 +74,7 @@ Commits N Crosses
 
     git add .
     git commit -m "another comment"
-    git push origin game1
+    git push origin <player1 user name>/game1
 
  Each player should repeat the pull, change, stage, commit and push steps until someone wins the game.
 
@@ -83,7 +83,7 @@ Commits N Crosses
  To start a new game Player 2 checks out master branch, creates a new branch, checks it out and continues as Player 1 did with the first move:
 
     git checkout master
-    git branch game2
-    git checkout game2
+    git branch <player2 user name>/game2
+    git checkout <player2 user name>/game2
 
  Begin again!
